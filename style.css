@@ -1,0 +1,40 @@
+div {
+	
+	border: 1px solid black;
+	height: 150px;
+}
+
+#red{
+	background: red;
+	height: 150px;
+}
+
+#green{
+	background: green;
+	height: 150px;
+}
+
+#yellow{
+	background: yellow;
+	height: 150px;
+}
+
+#orange{
+	background: orange;
+	height: 150px;
+}
+
+#purple{
+	background: purple;
+	height: 150px;
+}
+
+#brown{
+	background: brown;
+	height: 150px;
+}
+
+
+.blue {
+	background: blue !important;
+}
