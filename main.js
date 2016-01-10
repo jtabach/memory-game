@@ -48,7 +48,7 @@ function checkForMatch() {
 			$oneP.addClass('blue');
 			$twoP.addClass('blue');
 			clickHandler();
-		}, 1000);
+		}, 800);
 	} else {
 		checkForWin();
 	}

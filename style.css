@@ -1,7 +1,19 @@
 div {
-	
-	border: 1px solid black;
 	height: 150px;
+}
+
+.container {
+	text-align: center;
+}
+
+h1 {
+	color: green;
+	text-align: center;
+	margin: 50px 0;
+}
+
+.col-md-3 {
+	border: 3px solid white;
 }
 
 #red{
@@ -35,6 +47,19 @@ div {
 }
 
 
-.blue {
+/*.blue {
 	background: blue !important;
+}*/
+
+.btn-default {
+	margin-top: 50px;
+	width: 200px;
+	color: white;
+	background: green;
+	display: inline-block;
+}
+
+.btn-default:hover {
+	background: #006600;
+	color: white;
 }
