@@ -5,7 +5,9 @@ var selected = false;
 var colors = ['red', 'red', 'orange', 'orange','yellow',
 	'yellow','green','green','purple','purple','brown','brown'];
 
-console.log(colors);
+var colorReset = colors.map(function(val) {
+	return val;
+});
 
 $(document).ready(init);
 
@@ -16,7 +18,7 @@ function init() {
 }
 
 function clickHandler() {
-	$('div').on('click', checkCoverLayer);
+	$('.col-lg-3').on('click', checkCoverLayer);
 	$('button').on('click', resetGame);
 }
 
@@ -36,7 +38,6 @@ function checkCoverLayer() {
 
 function selectPiece() {
 	$oneP.removeClass('blue');
-	console.log($oneP.attr('id'))
 	selected = true;
 }
 
@@ -48,7 +49,7 @@ function checkForMatch() {
 			$oneP.addClass('blue');
 			$twoP.addClass('blue');
 			clickHandler();
-		}, 800);
+		}, 500);
 	} else {
 		checkForWin();
 	}
@@ -69,16 +70,15 @@ function randomize() {
 	for (var i = 0; i < length; i++) {
 		rand = Math.floor(Math.random()*colors.length);
 		colorGot = colors[rand];
-		console.log(colorGot);
 		$container.find('div:nth-child('+(i+1)+')').attr('id', colorGot);
 		colors.splice(rand, 1);
-		console.log(colors);
 	}
 }
 
 function resetGame() {
-	$('.container').children().children().addClass('blue');
-	colors = ['red', 'red', 'orange', 'orange','yellow',
-	'yellow','green','green','purple','purple','brown','brown'];
+	colors = colorReset.map(function(val) {
+		return val;
+	});
+	$('.row').children().addClass('blue');
 	randomize();
 }
